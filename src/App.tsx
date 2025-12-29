@@ -31,7 +31,7 @@ function App() {
       </p>
       <Icon
         name='arrow-down'
-        size='5em'
+        size={50}
       />
     </>
   )
