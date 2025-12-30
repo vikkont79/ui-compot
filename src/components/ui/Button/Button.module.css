@@ -1,0 +1,12 @@
+.button {
+  padding: var(--spacing-3);
+  border: var(--border-width-default) solid black;
+  border-radius: var(--border-radius-lg);
+}
+
+
+.primary {
+  background-color: var(--color-primary-500);
+  color: white;
+  border-color: var(--color-primary-700);
+}

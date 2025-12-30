@@ -4,17 +4,11 @@
  */
 
 /* Базовые пропсы для всех кнопок/кликабельных элементов */
-export interface BaseButtonProps {
-  /** Текст или содержимое кнопки */
+export interface BasePressableProps {
+  /** Текст или содержимое кнопки, строки */
   children: React.ReactNode;
   /** Дополнительные CSS-классы */
   className?: string;
-  /** Отключено ли состояние */
-  disabled?: boolean;
-  /** Тип кнопки (submit, button, reset) */
-  type?: 'button' | 'submit' | 'reset';
-  /** Обработчик клика */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 /* Базовые пропсы для инпутов/форм */
