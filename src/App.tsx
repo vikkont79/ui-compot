@@ -34,9 +34,8 @@ function App() {
         name='arrow-down'
         size={50}
       />
-      <Link>Жопа</Link>
-      <Button
-        to='/'>ОпятьЖопа</Button>
+      <Link>Link/span</Link>
+      <Button>Button/Link</Button>
     </>
   )
 }

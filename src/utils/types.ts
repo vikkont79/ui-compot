@@ -27,4 +27,4 @@ export interface BaseInputProps {
 
 /* Варианты внешнего вида компонентов */
 export type Variant = 'primary' | 'secondary' | 'outline' | 'ghost';
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type Size = 'small' | 'base' | 'large';

@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   className = '',
   variant = 'primary',
-  size = 'md',
+  size = 'base',
   type = 'button',
   onClick,
   to,
@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return to ? (
     <RouterLink
-      className={`${styles.button} ${styles[variant]} ${className || ''}`.trim()}
+      className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
       to={to}
       {...attributes}
     >
@@ -42,13 +42,13 @@ const Button: React.FC<ButtonProps> = ({
   ) : (
     <button
       type={type}
-      className={`${styles.button} ${styles[variant]} ${className || ''}`.trim()}
+      className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
       onClick={onClick}
       {...attributes}
     >
       {children}
     </button>
-  );
+  )
 }
 
 export { Button };

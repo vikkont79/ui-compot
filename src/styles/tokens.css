@@ -3,56 +3,81 @@
 
 :root {
   /* ----- ЦВЕТА ----- */
-  /* Основные (primary) */
-  --color-primary-50: #eff6ff;
-  --color-primary-500: #3b82f6;
-  --color-primary-700: #1d4ed8;
+  --color-black: #000000;
+  --color-white: #ffffff;
 
-  /* Нейтральные (neutral) */
-  --color-neutral-50: #f9fafb;
-  --color-neutral-200: #e5e7eb;
-  --color-neutral-700: #374151;
-  --color-neutral-900: #111827;
+  --color-base-300: #272b3b;
+  --color-base-400: #192144;
+  --color-base-500: #1d2e5b;
+  --color-base-600: #161c35;
 
-  /* Семантические (semantic) */
+  --color-primary-50: #edeff6;
+  --color-primary-100: #cce5fa;
+  --color-primary-200: #a8d2f4;
+  --color-primary-300: #aed0eb;
+  --color-primary-400: #7ebaeb;
+  --color-primary-500: #4d99d6;
+  --color-primary-600: #468ac1;
+
+  --color-neutral-50: #edeff6;
+  --color-neutral-100: #e2e5f2;
+  --color-neutral-200: #d6daed;
+  --color-neutral-500: #444444;
+  --color-neutral-600: #3f4251;
+
   --color-success: #10b981;
   --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-error: #ff5c23;
 
   /* ----- ТИПОГРАФИКА ----- */
   --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-family-mono: 'Roboto Mono', SFMono-Regular, Menlo, monospace;
 
-  --font-size-xs: 0.75rem;   /* 12px */
-  --font-size-sm: 0.875rem;  /* 14px */
-  --font-size-base: 1rem;    /* 16px */
-  --font-size-lg: 1.125rem;  /* 18px */
-
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  --font-size-sm: 1.25rem;
+  /* 20px */
+  --font-size-base: 1.5rem;
+  /* 24px */
+  --font-size-lg: 2rem;
+  /* 32px */
+  --font-size-xl: 2.25rem;
+  /* 36px */
 
   /* ----- ОТСТУПЫ (SPACING) ----- */
-  --spacing-unit: 0.25rem; /* 4px */
-  --spacing-1: var(--spacing-unit);     /* 4px */
-  --spacing-2: calc(var(--spacing-unit) * 2);  /* 8px */
-  --spacing-3: calc(var(--spacing-unit) * 3);  /* 12px */
-  --spacing-4: calc(var(--spacing-unit) * 4);  /* 16px */
-  --spacing-6: calc(var(--spacing-unit) * 6);  /* 24px */
+  --base-indent: 0.25rem;
+  --spacing-unit: 0.25rem;
+  /* 4px */
+  --spacing-1: var(--spacing-unit);
+  /* 4px */
+  --spacing-2: calc(var(--spacing-unit) * 2);
+  /* 8px */
+  --spacing-3: calc(var(--spacing-unit) * 3);
+  /* 12px */
+  --spacing-4: calc(var(--spacing-unit) * 4);
+  /* 16px */
+  --spacing-6: calc(var(--spacing-unit) * 6);
+  /* 24px */
 
   /* ----- ГРАНИЦЫ (BORDERS) ----- */
-  --border-radius-sm: 0.25rem;  /* 4px */
-  --border-radius-md: 0.375rem; /* 6px */
-  --border-radius-lg: 0.5rem;   /* 8px */
-
-  --border-width-default: 1px;
+  --border-radius-sm: 0.25rem;
+  /* 4px */
+  --border-radius-md: 0.375rem;
+  /* 6px */
+  --border-radius-lg: 1.25rem;
+  /* 20px */
 
   /* ----- ТЕНИ (SHADOWS) ----- */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 
+  /* ----- ПРОЗРАЧНОСТЬ (OPACITY) ----- */
+
+  --opacity-base: 0.3;
+  --opacity-disabled: 0.1;
+
+
   /* ----- АНИМАЦИЯ ----- */
   --transition-fast: 150ms ease-in-out;
   --transition-base: 250ms ease-in-out;
+  --transition-all: all 2s;
 }
