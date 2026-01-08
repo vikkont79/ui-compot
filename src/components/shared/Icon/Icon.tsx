@@ -1,4 +1,4 @@
-import styles from './Icon.module.css';
+import styles from './Icon.module.css'
 
 interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   name: string;
@@ -7,14 +7,14 @@ interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   label?: string;
 }
 
-const Icon: React.FC<IconProps> = ({
+const Icon = ({
   name,
   size = 24,
   color = 'currentColor',
   className = '',
   label,
-  ...rest
-}) => {
+  ...props
+}: IconProps) => {
   const inlineStyles = {
     '--icon-size': typeof size === 'number' ? `${size}px` : size,
     '--icon-color': color,
@@ -27,12 +27,12 @@ const Icon: React.FC<IconProps> = ({
 
   return (
     <span
+      {...props}
       className={`${styles.icon} ${className}`.trim()}
       style={inlineStyles}
       {...accessibilityProps}
-      {...rest}
     />
-  );
-};
+  )
+}
 
 export { Icon }

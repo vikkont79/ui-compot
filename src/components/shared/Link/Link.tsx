@@ -1,22 +1,21 @@
-import type React from 'react';
 import { Link as RouterLink } from 'react-router-dom'
 import styles from './Link.module.css'
-import type { BasePressableProps } from '../../../utils/types';
+import type { BasePressableProps } from '../../../utils/types'
 
 type LinkProps = BasePressableProps & (
   | { to: string }
   | { to?: never }
 )
 
-const Link: React.FC<LinkProps> = ({
+const Link = ({
   children,
   className = '',
   to,
-  ...attributes
-}) => {
+  ...props
+}: LinkProps) => {
   return to ? (
     <RouterLink
-      {...attributes}
+      {...props}
       className={`${styles.link} ${className || ''}`.trim()}
       to={to}
     >
@@ -24,7 +23,7 @@ const Link: React.FC<LinkProps> = ({
     </RouterLink>
   ) : (
     <span
-      {...attributes}
+      {...props}
       className={`${styles.link} ${className || ''}`.trim()}
     >
       {children}

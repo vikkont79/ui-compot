@@ -1,7 +1,6 @@
-import type React from "react";
 import { Link as RouterLink } from 'react-router-dom'
 import styles from "./Button.module.css"
-import type { BasePressableProps, Size, Variant } from "../../../utils/types";
+import type { BasePressableProps, Size, Variant } from "../../../utils/types"
 
 interface BaseButtonProps extends BasePressableProps {
   variant?: Variant;
@@ -21,7 +20,7 @@ type ButtonProps = BaseButtonProps & (
   }
 )
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   children,
   className = '',
   variant = 'primary',
@@ -29,26 +28,26 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   onClick,
   to,
-  ...attributes
-}) => {
+  ...props
+}: ButtonProps) => {
   return to ? (
     <RouterLink
+      {...props}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
       to={to}
-      {...attributes}
     >
       {children}
     </RouterLink>
   ) : (
     <button
-      type={type}
+      {...props}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
+      type={type}
       onClick={onClick}
-      {...attributes}
     >
       {children}
     </button>
   )
 }
 
-export { Button };
+export { Button }
