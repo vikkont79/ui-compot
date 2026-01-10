@@ -27,10 +27,10 @@ const Icon = ({
 
   return (
     <span
-      {...props}
       className={`${styles.icon} ${className}`.trim()}
       style={inlineStyles}
       {...accessibilityProps}
+      {...props}
     />
   )
 }

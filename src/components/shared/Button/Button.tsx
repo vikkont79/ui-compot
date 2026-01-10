@@ -32,18 +32,19 @@ const Button = ({
 }: ButtonProps) => {
   return to ? (
     <RouterLink
-      {...props}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
       to={to}
+      {...props}
+
     >
       {children}
     </RouterLink>
   ) : (
     <button
-      {...props}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className || ''}`.trim()}
       type={type}
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>

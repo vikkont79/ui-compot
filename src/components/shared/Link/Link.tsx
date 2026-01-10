@@ -15,16 +15,16 @@ const Link = ({
 }: LinkProps) => {
   return to ? (
     <RouterLink
-      {...props}
       className={`${styles.link} ${className || ''}`.trim()}
       to={to}
+      {...props}
     >
       {children}
     </RouterLink>
   ) : (
     <span
-      {...props}
       className={`${styles.link} ${className || ''}`.trim()}
+      {...props}
     >
       {children}
     </span>
