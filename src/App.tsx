@@ -2,12 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Button, Icon, Link } from './components/shared'
+import { Button, Icon, IconButton, Input, Link } from './components/shared'
 import { Layout } from './components/widgets/layout'
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const [name, setName] = useState('');
+
+  const handleChange = (newValue: string) => {
+    setName(newValue);
+  };
 
   return (
     <Layout>
@@ -25,6 +30,7 @@ function App() {
           <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
+          <p>My name is {name}</p>
           <p>
             Edit <code>src/App.tsx</code> and save to test HMR
           </p>
@@ -38,6 +44,18 @@ function App() {
         />
         <Link>Link/span</Link>
         <Button>Button/Link</Button>
+        <IconButton
+          icon='arrow-down'
+        >Свернуть</IconButton>
+        <Input
+          label='Имя'
+          hiddenLabel={true}
+          error='Введите имя'
+          isInvalid={true}
+          value={name}
+          id='1'
+          onChange={handleChange}
+        />
       </main>
     </Layout>
 
