@@ -35,4 +35,7 @@ const Icon = ({
   )
 }
 
-export { Icon }
+export {
+  Icon,
+  type IconProps,
+}

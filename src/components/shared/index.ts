@@ -1,4 +1,6 @@
-export { Icon } from './Icon/Icon'
+export { Icon, type IconProps } from './Icon/Icon'
 export { Link } from './Link/Link'
-export { Button } from './Button/Button'
+export { Button, type ButtonProps } from './Button/Button'
 export { Image } from './Image/Image'
+export { IconButton } from './IconButton/IconButton'
+export { Input } from './Input/Input'
