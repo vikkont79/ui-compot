@@ -42,7 +42,3 @@ h1 {
     background-color: #ffffff;
   }
 }
-
-.isInvalid .input {
-  border-color: red;
-}

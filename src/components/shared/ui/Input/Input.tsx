@@ -1,4 +1,4 @@
-import type { BaseInputProps, Size } from '../../../utils/types'
+import type { BaseInputProps, Size } from '../../types/types'
 import styles from './Input.module.css'
 
 interface InputProps extends BaseInputProps, Omit<React.InputHTMLAttributes<HTMLInputElement>,

@@ -1,4 +1,4 @@
-import { Button, type ButtonProps, Icon, type IconProps } from '../../shared'
+import { Button, type ButtonProps, Icon, type IconProps } from '../index'
 import styles from './IconButton.module.css'
 
 interface IconButtonProps extends Omit<ButtonProps, 'children'> {

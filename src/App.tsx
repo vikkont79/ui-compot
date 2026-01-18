@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Button, Icon, IconButton, Input, Link } from './components/shared'
+import { Button, Icon, IconButton, Input, Link } from './components/shared/ui'
 import { Layout } from './components/widgets/layout'
 
 
@@ -51,7 +51,6 @@ function App() {
           label='Имя'
           hiddenLabel={true}
           error='Введите имя'
-          isInvalid={true}
           value={name}
           id='1'
           onChange={handleChange}

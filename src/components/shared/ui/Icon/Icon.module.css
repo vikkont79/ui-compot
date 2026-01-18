@@ -1,5 +1,3 @@
-@import '../../../styles/tokens.css';
-
 .icon {
   /* Базовые стили для элемента, который станет иконкой */
   display: inline-block;
