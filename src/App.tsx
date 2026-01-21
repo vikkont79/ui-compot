@@ -2,17 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Button, Icon, IconButton, Input, Link } from './components/shared/ui'
+import { Button, CounterInput, Icon, IconButton, Input, Link } from './components/shared/ui'
 import { Layout } from './components/widgets/layout'
 
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState('');
+  const [name, setName] = useState('')
+  const [qty, setQty] = useState(1)
 
-  const handleChange = (newValue: string) => {
+  const handleInputChange = (newValue: string) => {
     setName(newValue);
   };
+
+  const handleQtyChange = (newQty: number) => {
+    setQty(newQty)
+  }
 
   return (
     <Layout>
@@ -46,14 +51,22 @@ function App() {
         <Button>Button/Link</Button>
         <IconButton
           icon='arrow-down'
-        >Свернуть</IconButton>
+        ></IconButton>
         <Input
           label='Имя'
           hiddenLabel={true}
           error='Введите имя'
           value={name}
           id='1'
-          onChange={handleChange}
+          onChange={handleInputChange}
+        />
+        <CounterInput
+          id='2'
+          label='Количество:'
+          value={qty}
+          onChange={handleQtyChange}
+          min={1}
+          max={10}
         />
       </main>
     </Layout>
