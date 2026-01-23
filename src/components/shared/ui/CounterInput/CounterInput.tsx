@@ -6,6 +6,7 @@ interface CounterInputProps {
   id: string;
   label: string;
   value: number;
+  unit?: string;
   onChange: (value: number) => void;
   min: number;
   max: number;
@@ -18,11 +19,12 @@ const CounterInput = ({
   id,
   label,
   value,
+  unit,
   onChange,
   min,
   max,
   step = 1,
-  iconSize = 16,
+  iconSize = 20,
   className = '',
 }: CounterInputProps) => {
   const handleIncrement = () => {
@@ -32,11 +34,16 @@ const CounterInput = ({
   const handleDecrement = () => {
     onChange(Math.max(min, value - step));
   }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(Number(e.target.value))
+  }
+
   return (
-    <div className={`${styles.counterWrapper} ${className}`}>
-      <label htmlFor={id} className={styles.label}>
+    <label className={`${styles.counterWrapper} ${className}`}>
+      <span>
         {label}
-      </label>
+      </span>
 
       <div className={styles.counter}>
         <button
@@ -52,8 +59,9 @@ const CounterInput = ({
         <input
           id={id}
           type="text"
+          inputMode="numeric"
           value={value}
-          readOnly
+          onChange={handleInputChange}
           className={styles.input}
           aria-label={label}
         />
@@ -68,7 +76,8 @@ const CounterInput = ({
           <Icon name="plus" size={iconSize} />
         </button>
       </div>
-    </div>
+      {unit && <span>{unit}</span>}
+    </label>
   )
 }
 

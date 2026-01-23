@@ -64,6 +64,7 @@ function App() {
           id='2'
           label='Количество:'
           value={qty}
+          unit='чел.'
           onChange={handleQtyChange}
           min={1}
           max={10}
