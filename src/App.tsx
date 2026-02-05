@@ -59,15 +59,18 @@ function App() {
           value={name}
           id='1'
           onChange={handleInputChange}
+          isInvalid={true}
         />
         <CounterInput
           id='2'
           label='Количество:'
+          error='Неверное значение'
           value={qty}
           unit='чел.'
           onChange={handleQtyChange}
           min={1}
           max={10}
+          isInvalid={true}
         />
       </main>
     </Layout>

@@ -3,16 +3,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 50px;
 }
 
 .icon {
   flex-shrink: 0;
 }
 
-.text {
-  line-height: 1;
-}
 
 .iconButton[data-icon-position="right"] {
   flex-direction: row-reverse;

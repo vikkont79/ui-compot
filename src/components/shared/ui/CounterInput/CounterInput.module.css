@@ -1,15 +1,21 @@
 .counterWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--indent-4);
-  font-size: var(--font-size-sm);
   line-height: 18px;
   font-weight: 500;
+
+}
+
+.label {
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
 }
 
 .counter {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,5 +46,18 @@
   text-align: center;
   border: none;
   outline: none;
-  color: var(-color-base-500);
+  color: var(--color-base-500);
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  color: var(--color-error);
+  font-weight: 500;
+  line-height: 2;
+  text-transform: initial;
+}
+
+.counterWrapper:has(.error) .counter {
+  border-color: var(--color-error);
 }
