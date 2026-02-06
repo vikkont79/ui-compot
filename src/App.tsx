@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Button, CounterInput, Icon, IconButton, Input, Link } from './components/shared/ui'
+import { Button, CounterInput, Icon, IconButton, Input, Link, Textarea } from './components/shared/ui'
 import { Layout } from './components/widgets/layout'
 
 
@@ -10,6 +10,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [name, setName] = useState('')
   const [qty, setQty] = useState(1)
+  const [text, setText] = useState('')
 
   const handleInputChange = (newValue: string) => {
     setName(newValue);
@@ -17,6 +18,10 @@ function App() {
 
   const handleQtyChange = (newQty: number) => {
     setQty(newQty)
+  }
+
+  const handleTextareaChange = (newValue: string) => {
+    setText(newValue)
   }
 
   return (
@@ -59,7 +64,6 @@ function App() {
           value={name}
           id='1'
           onChange={handleInputChange}
-          isInvalid={true}
         />
         <CounterInput
           id='2'
@@ -70,7 +74,12 @@ function App() {
           onChange={handleQtyChange}
           min={1}
           max={10}
-          isInvalid={true}
+        />
+        <Textarea
+          label='Пожелания'
+          value={text}
+          onChange={handleTextareaChange}
+          error='Введите текст'
         />
       </main>
     </Layout>

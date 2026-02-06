@@ -31,7 +31,8 @@ const Input = ({
     <label
       className={`${styles.inputWrapper} ${className || ''}`.trim()}
     >
-      <span className={hiddenLabel ? 'visually-hidden' : styles.label}>{label}</span>
+      <span className={hiddenLabel ? 'visually-hidden' : styles.label}>{label}
+      </span>
       <input
         className={`${styles.input} ${styles[size]}`}
         type={type}
